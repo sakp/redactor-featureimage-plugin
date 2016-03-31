@@ -1,5 +1,5 @@
 # Redactor feature image plugin
-Redactor plugin for adding feature image using redactor image modal
+[Redactor](https://imperavi.com/redactor/) plugin for adding feature image using redactor image modal
 
 ## configuration
 
