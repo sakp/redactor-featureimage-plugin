@@ -7,7 +7,7 @@
 				if (!this.opts.imageManagerJson) return;
 				var _this = this;
 
-				$('.redactor-featureimage').on('click', function(e){
+				$(this.opts.featureimage.linkSelector).on('click', function(e){
 					e.preventDefault();
 
 					_this.modal.addTemplate('featureimage', _this.modal.getTemplate('image'));
@@ -24,8 +24,8 @@
 				
 			},
 			insert: function(json, direct, e){
-				$(this.opts.featureimage_preview).html('<img src="' + json.url + '">');
-				$(this.opts.featureimage_input).val(json.url);
+				$(this.opts.featureimage.previewSelector).html('<img src="' + json.url + '">');
+				$(this.opts.featureimage.inputSelector).val(json.url);
 				this.modal.close();
 			}
 		};
