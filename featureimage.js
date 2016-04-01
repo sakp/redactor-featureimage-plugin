@@ -2,10 +2,20 @@
 	$.Redactor.prototype.featureimage = function()
 	{
 		return {
+			opts: {
+				featureimage: {
+					linkSelector    : '.redactor-featureimage'
+					previewSelector : '.feature-image-preview',
+					inputSelector   : '.feature-image-input',
+				}
+			}
 			init: function()
 			{
 				if (!this.opts.imageManagerJson) return;
 				var _this = this;
+
+				/* merge settings */
+				this.opts = $.extend({}, this.featureimage.opts, this.opts);
 
 				$(this.opts.featureimage.linkSelector).on('click', function(e){
 					e.preventDefault();
